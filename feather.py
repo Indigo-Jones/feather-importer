@@ -63,7 +63,7 @@ else:
 
     user_path = None
     for file in os.scandir(gm_path):
-        if file.is_dir() && file.name != 'Cache':
+        if file.is_dir() and file.name != 'Cache':
             if user_path is None:
                 user_path = gm_path/file
             else:
