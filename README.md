@@ -44,3 +44,8 @@ inject the feather settings in `settings.json` into the file specified by the `-
 ```
 py feather.py -i settings.json -b -f "C:\Users\User\AppData\Roaming\GameMakerStudio2\gamemakerusername\local_settings.json"
 ```
+
+## Requirements
+<a href='https://www.python.org/downloads/'> python 3.10.0</a>
+May work on 3.6+ but I haven't tested.
+Don't even try anything lower, it won't work.
