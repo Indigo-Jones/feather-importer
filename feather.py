@@ -48,7 +48,7 @@ else:
     try:
         if sys.platform.startswith('win32'):
             gm_path = Path(os.environ['APPDATA'])/'GameMaker'
-        elif sys.playform.startswith('darwin'):
+        elif sys.platform.startswith('darwin'):
             gm_path = Path.home()/'.config'/'GameMaker'
         else:
             print(AUTO_SEEK_ERROR_MSG)
