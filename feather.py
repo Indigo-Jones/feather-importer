@@ -34,7 +34,7 @@ parser = argparse.ArgumentParser(description='Extract & Inject feather settings 
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-i', metavar='PATH',      help='path of the file to inject', dest='inject')
 group.add_argument('-e', metavar='PATH',     help='path to extract feather settings to', dest='extract')
-parser.add_argument('--no-backup', action='store_false', help='create a backup of GameMaker\'s settings', dest='backup')
+parser.add_argument('--no-backup', action='store_false', help='don\'t create a backup of GameMaker\'s settings', dest='backup')
 parser.add_argument('-f', metavar='PATH',            help='path of GameMaker\'s local_settings.json file', dest='file')
 
 args = parser.parse_args()
