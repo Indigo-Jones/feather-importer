@@ -11,8 +11,7 @@ the file location of the settings file using the -f argument,
 
 Next, take a json file containing the feather settings you want to import and use the command `py feather.py -i new_settings.json` to import
 the new settings into the IDE. This will overwrite *all* feather settings in the IDE, even ones not specified in the imported settings file.
-Optionally you can use the -b flag to make a backup of the settings you are overwriting in case anything goes wrong, this backup will be located
-in the same directory as local_settings.json and will be called local_settings.json.backup.
+This will also create a backup of GameMaker's settings before the injection, called `local_settings.backup`, this functionality can be disabled with the `--no-backup` flag
 
 
 ## Usage:
@@ -22,11 +21,11 @@ usage: feather.py [-h] (-i PATH | -e PATH) [-b] [-f PATH]
 Extract & Inject feather settings from GameMaker Studio's IDE settings.
 
 options:
-  -h, --help  show this help message and exit
-  -i PATH     path of the file to inject
-  -e PATH     path to extract feather settings to
-  -b          create a backup of GameMaker's settings
-  -f PATH     path of GameMaker's local_settings.json file
+  -h, --help   show this help message and exit
+  -i PATH      path of the file to inject
+  -e PATH      path to extract feather settings to
+  --no-backup  don't create a backup of GameMaker's settings
+  -f PATH      path of GameMaker's local_settings.json file
 ```
 ## Examples:
 
@@ -40,9 +39,9 @@ inject the feather settings in `settings.json` into the gamemaker IDE
 py feather.py -i settings.json
 ```
 
-inject the feather settings in `settings.json` into the file specified by the `-f` argument
+inject the feather settings in `settings.json` into the file specified by the `-f` argument, without creating a backup
 ```
-py feather.py -i settings.json -b -f "C:\Users\User\AppData\Roaming\GameMakerStudio2\gamemakerusername\local_settings.json"
+py feather.py -i settings.json --no-backup -f "C:\Users\User\AppData\Roaming\GameMakerStudio2\gamemakerusername\local_settings.json"
 ```
 
 ## Requirements
